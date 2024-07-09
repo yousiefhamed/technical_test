@@ -1,3 +1,12 @@
+:root {
+  --color-black: #1c1c1c;
+  --color-offwhite: #f0edff;
+  --color-gray: #525252;
+  --color-lightgray: #f0edffcc;
+  --color-lightpurple: #9181f4;
+  --color-darkpurple: #5038ed;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -33,7 +42,7 @@
 }
 
 .content__header p {
-  color: #525252;
+  color: var(--color-gray);
   font-size: 16px;
   font-weight: 400;
 }
@@ -64,7 +73,7 @@
   max-width: 364px;
   height: 52px;
   border-radius: 16px;
-  background: rgba(240, 237, 255, 0.8);
+  background: var(--color-lightgray);
 }
 
 .form-group i {
@@ -80,7 +89,11 @@
   height: 52px;
   border: 0;
   border-radius: 16px;
-  background: linear-gradient(100deg, #9181f4 -5.85%, #5038ed 109.55%);
+  background: linear-gradient(
+    100deg,
+    var(--color-lightpurple) -5.85%,
+    var(--color-darkpurple) 109.55%
+  );
   box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.16);
   color: #fff;
   font-size: 12px;
@@ -106,7 +119,7 @@
   line-height: 20px;
   background-color: #fff;
   padding: 0 10px;
-  color: #1c1c1c;
+  color: var(--color-black);
   font-size: 16px;
   font-weight: 400;
 }
@@ -119,7 +132,7 @@
   content: "";
   width: 100%;
   height: 2px;
-  background-color: #f0edff;
+  background-color: var(--color-offwhite);
   position: absolute;
   top: 10px;
   left: 0;
@@ -127,9 +140,10 @@
 }
 
 .login__with-btn {
+  width: 100%;
   height: 52px;
   border-radius: 16px;
-  border: 1px solid #f0edff;
+  border: 1px solid var(--color-offwhite);
   margin: 20px auto;
   gap: 8px;
   transition: transform 0.5s;
@@ -146,13 +160,19 @@
 }
 
 .login__with-btn p {
-  color: #1c1c1c;
+  color: var(--color-black);
   font-size: 12px;
   font-weight: 400;
 }
 
 .login__with-btn p span {
   font-weight: 700;
+}
+
+button:focus,
+.login__with-btn:focus {
+  outline: 2px solid var(--color-darkpurple);
+  outline-offset: 2px;
 }
 
 .visual {
@@ -167,8 +187,8 @@
   max-width: 412px;
   margin: 0 50px;
   border-radius: 46px;
-  border: 1px solid rgba(255, 255, 255, 0.52);
-  background: rgba(255, 255, 255, 0.21);
+  border: 1px solid #ffffff85;
+  background: #ffffff36;
   backdrop-filter: blur(6.8px);
   position: relative;
 }
