@@ -111,7 +111,7 @@ aside.flex {
   position: sticky;
   top: 0;
   transition: transform 0.5s;
-  z-index: 20;
+  z-index: 15;
 
   .brand {
     gap: 10px;
