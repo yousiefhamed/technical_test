@@ -16,6 +16,11 @@ p {
   line-height: normal;
 }
 
+ul,
+ul li {
+  list-style: none;
+}
+
 a {
   color: black;
   cursor: pointer;
